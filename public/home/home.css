@@ -2,7 +2,7 @@ body {
     height: 100vh;
     padding: 0;
     margin: 0;
-    background-color: #0B192C;
+    background-color: #121212;
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -16,14 +16,19 @@ body {
     "foot foot";
 }
 
+h1 {
+    color: #22c16e;
+}
+
 nav {
+    padding: 1vw;
     display: block;
-    background-color: red;
+    background-color: #282828;
     grid-area: top;
 }
 
 aside {
-    background-color: pink;
+    background-color: #18211b;
     grid-area: side;
 }
 
@@ -34,7 +39,7 @@ main {
 
 footer{
     height: 5vh;
-    background-color: gray;
+    background-color: #3f3f3f;
     grid-area: foot;
 }
 ::-webkit-scrollbar {
