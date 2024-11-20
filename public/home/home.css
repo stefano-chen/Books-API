@@ -21,6 +21,11 @@ h1 {
     font-size: 2em;
 }
 
+dl, dt, dd {
+    color: #22c16e;
+    font-size: 1.3em;
+}
+
 nav {
     padding-left: 5vw;
     display: block;
@@ -34,6 +39,7 @@ aside {
 }
 
 main {
+    padding: 5vw;
     background-color: transparent;
     grid-area: right;
 }
