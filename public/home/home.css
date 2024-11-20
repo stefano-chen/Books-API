@@ -8,7 +8,7 @@ body {
     scrollbar-width: none;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 10fr 5fr;
+    grid-template-rows: 0.5fr 10fr 5fr;
     grid-template-areas:
     "top top"
     "side right"
@@ -18,10 +18,11 @@ body {
 
 h1 {
     color: #22c16e;
+    font-size: 2em;
 }
 
 nav {
-    padding: 1vw;
+    padding-left: 5vw;
     display: block;
     background-color: #282828;
     grid-area: top;
