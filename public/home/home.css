@@ -1,0 +1,43 @@
+body {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: #0B192C;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 10fr 5fr;
+    grid-template-areas:
+    "top top"
+    "side right"
+    "side right"
+    "foot foot";
+}
+
+nav {
+    display: block;
+    background-color: red;
+    grid-area: top;
+}
+
+aside {
+    background-color: pink;
+    grid-area: side;
+}
+
+main {
+    background-color: transparent;
+    grid-area: right;
+}
+
+footer{
+    height: 5vh;
+    background-color: gray;
+    grid-area: foot;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
