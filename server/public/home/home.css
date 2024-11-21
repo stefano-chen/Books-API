@@ -39,6 +39,7 @@ aside {
 }
 
 main {
+    overflow: scroll;
     padding: 5vw;
     background-color: transparent;
     grid-area: right;
