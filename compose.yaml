@@ -9,6 +9,9 @@ services:
     environment:
       NODE_ENV: production   # npm will not install dev-Dependencies
       DATABASE_URI: "mongodb://database:27017"
+#    command: ["npm", "run", "dev"]    # this line is use for development inside the container (nodemon restarting the server after changes) MUST BE DELETED FOR PRODUCTION!!!
+#    volumes:                          # this line is use for development inside the container MUST BE DELETED FOR PRODUCTION!!!
+#      - ./server:/usr/src/app         # a direct mapping of the src code, it's not a copy!!!, (modifying the files on the host -> modifying the file inside the container)
     ports:
       - "3000:3000"
     networks:
@@ -21,8 +24,9 @@ services:
     container_name: books-database
     image: mongo:latest
     volumes:
-      - ./database/data:/data/db
-      - ./database/scripts/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - ./database/data:/data/db                                                        # persist the database data, more info at https://hub.docker.com/_/mongo (Where to Store Data)
+      - ./database/scripts/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro   # map the script to initialize mongodb with read-only permission
+                                                                                        # more info at https://hub.docker.com/_/mongo (Initializing a fresh instance)
     ports:
       - "27017:27017"
     networks:
