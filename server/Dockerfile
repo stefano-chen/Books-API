@@ -3,7 +3,7 @@ FROM node:latest
 
 # Use production node environment by default.
 # npm will not install dev-Dependencies
-ENV NODE_ENV production
+ENV NODE_ENV=production
 
 
 WORKDIR /usr/src/app
