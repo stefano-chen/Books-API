@@ -4,8 +4,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "dev": "nodemon --watch . --legacy-watch -e js server.js"
+    "start": "node ./src/server.js",
+    "dev": "nodemon --watch ./src --legacy-watch -e js server.js"
   },
   "author": "",
   "license": "ISC",
